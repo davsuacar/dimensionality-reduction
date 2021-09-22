@@ -1,0 +1,12 @@
+version: '3'
+services:
+  datascience-notebook:
+    image: jupyter/datascience-notebook
+    labels:
+      description: Intel Python 2 using Jupyter Notebooks
+      name: jupyter notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    build: .
